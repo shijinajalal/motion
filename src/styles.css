@@ -1,5 +1,5 @@
 /* ============================================================
-   Lohitha — luxury portfolio hero
+   Imthiyas — luxury portfolio hero (imthiyasdesign.com)
    Motion rules: no perspective / rotateX / rotateY anywhere.
    The page and canvas stay rock solid; only the head pose changes.
    ============================================================ */
@@ -167,7 +167,8 @@ html.has-custom-cursor * {
 .hero__hi,
 .hero__name,
 .hero__bio,
-.hero__actions {
+.hero__actions,
+.hero__site {
   opacity: 0;
   translate: 0 22px;
   transition:
@@ -194,6 +195,11 @@ html.has-custom-cursor * {
   opacity: 1;
   translate: 0 0;
   transition-delay: 0.68s;
+}
+.app.is-ready .hero__site {
+  opacity: 1;
+  translate: 0 0;
+  transition-delay: 0.8s;
 }
 
 .hero__hi {
@@ -233,6 +239,26 @@ html.has-custom-cursor * {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
+}
+
+.hero__site {
+  display: inline-block;
+  margin-top: clamp(16px, 2.4vh, 24px);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-faint);
+  transition:
+    color 0.35s ease,
+    opacity 0.9s ease,
+    translate 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero__site:hover {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* ---------- Buttons ---------- */
@@ -390,7 +416,8 @@ html.has-custom-cursor .cursor-ring {
   .hero__hi,
   .hero__name,
   .hero__bio,
-  .hero__actions {
+  .hero__actions,
+  .hero__site {
     transition: none !important;
     transition-delay: 0s !important;
     opacity: 1 !important;

@@ -86,7 +86,11 @@ const checks = [
   ['canvas exists', !!window.document.querySelector('canvas.character-canvas')],
   ['nav pill exists', !!window.document.querySelector('.nav__pill')],
   ['3 nav links', window.document.querySelectorAll('.nav__link').length === 3],
-  ['hero name = Lohitha', window.document.querySelector('.hero__name')?.textContent === 'Lohitha'],
+  ['hero name = Imthiyas', window.document.querySelector('.hero__name')?.textContent === 'Imthiyas'],
+  ['site link = imthiyasdesign.com', (() => {
+    const a = window.document.querySelector('.hero__site')
+    return a?.textContent.trim() === 'imthiyasdesign.com' && a?.getAttribute('href') === 'https://imthiyasdesign.com'
+  })()],
   ['resume button', !!window.document.querySelector('.btn--solid')],
   ["let's talk button", !!window.document.querySelector('.btn--ghost')],
   ['bio max-width set', !!window.document.querySelector('.hero__bio')],

@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section className="hero" aria-label="Introduction">
       <p className="hero__hi">Hi, I&rsquo;m</p>
-      <h1 className="hero__name">Lohitha</h1>
+      <h1 className="hero__name">Imthiyas</h1>
       <p className="hero__bio">
         Full Stack Developer crafting fast, accessible interfaces and robust
         APIs — turning ideas into polished products from concept to deployment.
@@ -36,6 +36,14 @@ export default function Hero() {
           Let&rsquo;s Talk
         </a>
       </div>
+      <a
+        className="hero__site"
+        href="https://imthiyasdesign.com"
+        target="_blank"
+        rel="noreferrer"
+      >
+        imthiyasdesign.com
+      </a>
     </section>
   )
 }
